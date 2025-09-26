@@ -14,7 +14,7 @@ export default class extends Controller {
   // O método connect() é a primeira coisa que executa quando o controller é carregado na página.
   connect() {
     this.currentItemIndex = 0;
-    this.destinos = this.dadosValue; // Pega os dados do HTML (que o Rails enviou)
+    this.destinos = this.dadosValue;  Pega os dados do HTML (que o Rails enviou)
 
     // Chama as funções para construir os elementos que faltam na sua tela
     this.renderBackgrounds();
