@@ -1,3 +1,69 @@
-<h1>Home#index</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projetos de Luxo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-<%= link_to "Admin", admin_dashboard_index_path %>
+  <%= vite_client_tag %>
+  <%= vite_stylesheet_tag 'application' %>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <%= vite_javascript_tag 'application' %>
+</head>
+
+<body>
+<div class="relative w-full h-screen overflow-hidden text-white">
+  <div id="bg-container" class="background-container absolute inset-0 z-0"></div>
+
+  <div class="relative flex flex-col justify-between h-full p-8 md:p-12 z-20">
+
+    <header class="flex justify-between items-start w-full">
+
+      <div>
+        <div id="project-selector">
+          </div>
+      </div>
+
+
+        <div id="partners-container" class="mt-4"> <h3>Parcerias de Prestígio</h3>
+          <div id="partner-logos" class="flex justify-end"> <div class="logos-track">
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <footer class="w-full">
+      <div id="item-details">
+        </div>
+    </footer>
+
+  </div>
+</div>
+
+  <script type="text/javascript">
+    window.projectImages = [
+      { arquivo: "<%= asset_path('Baccarat-Residences-Miami.png') %>", description: 'Uma torre de condomínio de luxo de 75 andares que combina o glamour de Paris com a energia de Miami.' },
+      { arquivo: "<%= asset_path('Six-Fisher-Island.png') %>", description: 'Exclusividade e sofisticação na ilha mais icônica de Miami.' },
+      { arquivo: "<%= asset_path('icon-beach.png') %>", description: 'Design inovador e amenidades de classe mundial na areia da praia.' },
+      { arquivo: "<%= asset_path('Parque-Global.png') %>", description: 'Um complexo marco em São Paulo, integrando residências e shopping.' },
+      { arquivo: "<%= asset_path('rivage.png') %>", description: 'Elegância à beira-mar com um estilo de vida de resort exclusivo.' },
+      { arquivo: "<%= asset_path('SLS-Harbour-Beach.png') %>", description: 'Arte, design e luxo com serviços de hotel cinco estrelas.' },
+      { arquivo: "<%= asset_path('VICEROY.png') %>", description: 'Uma fusão de arquitetura moderna e conforto atemporal.' }
+    ];
+    window.partnerLogos = [
+      { name: "Dezer", logoUrl: "<%= asset_path('logo/dezer.png') %>" },
+      { name: "Icon Beach", logoUrl: "<%= asset_path('logo/icon_beach.png') %>" },
+      { name: "Related", logoUrl: "<%= asset_path('logo/related.png') %>" },
+      { name: "Rivage", logoUrl: "<%= asset_path('logo/rivagelogo.png') %>" },
+      { name: "Tecnisa", logoUrl: "<%= asset_path('logo/tecnisa.png') %>" }
+    ];
+  </script>
+</body>
+</html>

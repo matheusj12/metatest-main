@@ -1,0 +1,12 @@
+/* NÃO coloque import JS aqui */
+.background-image {
+  @apply absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700;
+}
+
+.background-image.visible {
+  @apply opacity-100;
+}
+
+.item-card.active {
+  @apply ring-4 ring-yellow-400;
+}
